@@ -416,11 +416,11 @@
         color: var(--white);
         background: var(--main-color);
         svg {
-            stroke: var(--white);
+            fill: var(--white);
         }
     }
     svg {
-        stroke: var(--main-color);
+        fill: var(--main-color);
         flex: 0 0 20px;
         width: 20px;
         height: 20px;

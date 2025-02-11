@@ -2577,11 +2577,11 @@ mark {
 .filter-btn:hover svg,
 .filter-btn.active svg,
 .filter-btn.is-filtered svg {
-  stroke: var(--white);
+  fill: var(--white);
 }
 
 .filter-btn svg {
-  stroke: var(--main-color);
+  fill: var(--main-color);
   -webkit-box-flex: 0;
   -ms-flex: 0 0 20px;
   flex: 0 0 20px;
