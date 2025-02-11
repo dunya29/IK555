@@ -1,0 +1,7 @@
+{
+  "name": "Личный кабинет ИК 555",
+  "short_name": "ЛК ИК 555",
+  "theme_color": "#000",
+  "background_color": "#fff",
+  "display": "standalone"
+}
