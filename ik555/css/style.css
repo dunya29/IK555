@@ -1502,7 +1502,7 @@ mark {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   padding-top: 20px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3690,5 +3690,11 @@ mark {
 
   .news__items {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-height: 700px) {
+  .log-p .custom-scroll {
+    padding-top: 110px;
   }
 }
