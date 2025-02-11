@@ -1,0 +1,76 @@
+<!--item-order-->
+<div class="accordion item-order">
+    <div class="accordion__header">
+        <div class="item-order__header">
+            @@if(type === 'repair') {
+            <div class="item-order__type" data-label="Тип:">
+                <img src="img/icons/repair.svg" alt="Ремонт">
+                Ремонт
+            </div>
+            }
+            @@if(type === 'inmaintance') {
+            <div class="item-order__type" data-label="Тип:">
+                <img src="img/icons/clock.svg" alt="Тех. обслуживание">
+                Тех. обслуживание
+            </div>
+            }
+            @@if(type === 'supply') {
+            <div class="item-order__type" data-label="Тип:">
+                <img src="img/icons/box.svg" alt="Поставка">
+                Поставка
+            </div>
+            }
+            <span class="item-order__nmb" data-label="Номер:"><mark>454</mark>664664446464</span>
+            <span class="item-order__date" data-label="Дата создания:">11 Окт. 2024</span>
+            <span class="item-order__garanty" data-label="Гарантия до:">11 Фев. 2026</span>
+            @@if(type === 'repair') {
+            <span class="item-order__status completed" data-label="Статус:">Отгружен</span>
+            }
+            @@if(type === 'inmaintance') {
+            <span class="item-order__status failed" data-label="Статус:">Не выполнено</span>
+            }
+            @@if(type === 'supply') {
+            <span class="item-order__status completed" data-label="Статус:">Отгружен</span>
+            }
+        </div>
+        <svg class="accordion__icon"><use xlink:href="img/icons/sprite.svg#chevron-bot"></use></svg>
+    </div>
+    <div class="accordion__body">
+        <div class="accordion__content">
+            <div class="item-order__cols">
+                <div class="item-order__col">
+                    <div class="item-order__info">
+                        <div class="page-lbl">Название оборудования</div>
+                        <h4>Название оборудования</h4>
+                    </div>
+                    <button class="btn main-btn order-mod-open-btn" data-modal="garanty-mod" data-order-number="454664664446464">Обратиться по гарантии</button>
+                </div>
+                <div class="item-order__col">
+                    <div class="custom-scroll">
+                        <div class="item-order__det completed">
+                            <span class="item-order__bar"></span>
+                            <div class="item-order__det-info">
+                                <span>Входной контроль</span>
+                                <span>11 Окт. 2024</span>
+                            </div>
+                        </div>
+                        <div class="item-order__det completed">
+                            <span class="item-order__bar"></span>
+                            <div class="item-order__det-info">
+                                <span>Предосмотр</span>
+                                <span>13 Окт. 2024</span>
+                            </div>
+                        </div>
+                        <div class="item-order__det completed">
+                            <span class="item-order__bar"></span>
+                            <div class="item-order__det-info">
+                                <span>Отгружен</span>
+                                <span>14 Окт. 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

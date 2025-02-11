@@ -1,0 +1,59 @@
+<!--main-form-->
+<section class="section main-form">
+    <div class="main-form__inner">
+        <div class="media-contain">
+            <img src="img/form-bg.png" alt>
+        </div>
+        <div class="main-form__content">
+            <h2>Обратная связь</h2>
+            <form action class="form disabled-form"
+                onsubmit="event.preventDefault();formSuccess(this);openSuccessMod('Заявка успешно отправлена', 'Заявка успешно отправлена, наши менеджеры скоро ее рассмотрят. Мы ответим вам в ближайшее время')">
+                <div class="form__items">
+                    <div class="form__item">
+                        <div class="form__lbl">Тип услуги</div>
+                        <div class="item-form">
+                            @@include('_service-select.html')
+                            <span data-error></span>
+                        </div>
+                    </div>
+                    <div class="form__item">
+                        <div class="form__lbl">ФИО</div>
+                        <div class="item-form">
+                            <input type="text" name="name" placeholder="Иванов Иван Сергеевич" class="required">
+                            <span data-error></span>
+                        </div>
+                    </div>
+                    <div class="form__item">
+                        <div class="form__lbl">Телефон</div>
+                        <div class="item-form">
+                            <input type="tel" name="phone" placeholder="+7" class="required">
+                            <span data-error></span>
+                        </div>
+                    </div>
+                    <div class="form__item">
+                        <div class="form__lbl">Комментарий</div>
+                        <div class="item-form">
+                            <textarea placeholder="Текст комментария" name="message"></textarea>
+                            <span data-error></span>
+                        </div>
+                    </div>
+                    <div class="form__item">
+                        <div class="form__lbl">Прикрепить файл <span>(не обязательно)</span></div>
+                        <div class="item-form file-form">
+                            <label>
+                                <input type="file" multiple name="files" accept=".png,.jpg,.jpeg,.pdf,.doc,.docx,.ppt,.pptx">
+                                <span><svg><use xlink:href="img/icons/sprite.svg#upload"></use></svg>Размер файла не должен превышать 3мб</span>
+                            </label>
+                            <span data-error></span>
+                            <div class="file-form__items"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__footer">
+                    <button class="btn main-btn" type="submit" disabled>Отправить</button>
+                    <p>Нажимая на кнопку, я принимаю условия <a href="#" target="_blank" class="link">соглашения</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

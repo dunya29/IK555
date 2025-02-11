@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="image/x-icon" rel="shortcut icon" href="img/favicon/favicon.ico">
+    <link type="image/png" sizes="32x32" rel="icon" href="img/favicon/favicon-32x32.png">
+    <link type="image/png" sizes="192x192" rel="icon" href="img/favicon/android-icon-192x192.png">
+    <link type="image/svg+xml" sizes="any" rel="icon" href="img/favicon/favicon.svg">
+    <link sizes="120x120" rel="apple-touch-icon" href="img/favicon/apple-icon-120x120.png">
+    <link sizes="180x180" rel="apple-touch-icon" href="img/favicon/apple-icon-180x180.png">
+    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <title>Настройки - «Инженерная компания 555»</title>
+    <link href="css/flatpickr.min.css" type="text/css" rel="stylesheet">
+    <link href="css/style.min.css" type="text/css" rel="stylesheet">
+</head>
+
+    <body>
+        <div class="wrap">
+            <!--header-->
+
+    
+    <header class="header fixed-block">
+        
+        <div class="container header__container">
+            <div class="header__inner">
+                <a href="main.html" class="page-logo">
+                    <img src="img/logo.svg" alt="ИК 555">
+                </a>
+                <button class="btn stroke-btn mod-open-btn" data-modal="order-mod">
+                    <svg><use xlink:href="img/icons/sprite.svg#plus"></use></svg>
+                    Новый заказ
+                </button>
+                <div class="icon-menu" aria-label="Открыть меню">
+                    <div class="icon-menu__items">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mob-menu">
+            <div class="container">
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="#"><svg><use xlink:href="img/icons/sprite.svg#home"></use></svg>Главная</a></li>
+                        <li><a href="#"><svg><use xlink:href="img/icons/sprite.svg#orders"></use></svg>Заказы</a></li>
+                        <li><a href="#"><svg><use xlink:href="img/icons/sprite.svg#news"></use></svg>Новости</a></li>
+                        <li><a href="#"><svg><use xlink:href="img/icons/sprite.svg#settings"></use></svg>Настройки</a></li>
+                    </ul>
+                </nav>
+                <a href="#" class="page-redirect">
+                    <svg><use xlink:href="img/icons/sprite.svg#website"></use></svg>
+                    <span>Вернуться на сайт</span>
+                </a>
+                <button class="btn main-btn mod-open-btn" data-modal="order-mod">
+                    <svg><use xlink:href="img/icons/sprite.svg#plus"></use></svg>
+                    Новый заказ
+                </button>
+            </div>
+        </div>
+    </header>
+            <!--main-->
+            <main class="main">
+                <div class="container">
+                    <div class="page-wrap">
+                        <!--sidebar-->
+
+    
+    <aside class="sidebar">
+        
+        <div class="sidebar__inner">
+            <a href="main.html" class="page-logo">
+                <img src="img/logo.svg" alt="ИК 555">
+            </a>
+            <div class="sidebar__body">
+                <button class="btn stroke-btn mod-open-btn" data-modal="order-mod">
+                    <svg><use xlink:href="img/icons/sprite.svg#plus"></use></svg>
+                    Новый заказ
+                </button>
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="#" class=" "><svg><use xlink:href="img/icons/sprite.svg#home"></use></svg>Главная</a></li>
+                        <li><a href="#" class=" "><svg><use xlink:href="img/icons/sprite.svg#orders"></use></svg>Заказы</a></li>
+                        <li><a href="#" class=" "><svg><use xlink:href="img/icons/sprite.svg#news"></use></svg>Новости</a></li>
+                        <li><a href="#" class=" current"><svg><use xlink:href="img/icons/sprite.svg#settings"></use></svg>Настройки</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="sidebar__footer">
+                <a href="#" class="page-redirect">
+                    <svg><use xlink:href="img/icons/sprite.svg#website"></use></svg>
+                    <span>Вернуться на сайт</span>
+                </a>
+            </div>
+        </div>
+    </aside>
+                        <div class="page-wrap__content">
+                            <!--settings-p-->
+                            <section class="section settings-p">
+                                <div class="sec-top">
+                                    <h1>Настройки</h1>
+                                </div>
+                                <div class="settings-p__row">
+                                    <div class="settings-p__cols">
+                                        <div class="settings-p__col">
+                                            <h2>Данные о компании</h2>
+                                            <div class="settings-p__det">
+                                                <span>Название компании</span>
+                                                <span class="h4">Стройинвест</span>
+                                            </div>
+                                            <div class="settings-p__det">
+                                                <span>Контакты</span>
+                                                <div class="item-contact">
+                                                    <svg><use xlink:href="img/icons/sprite.svg#phone"></use></svg>
+                                                    <span class="h4">+7 (800) 511-63-08</span>
+                                                </div>
+                                                <div class="item-contact">
+                                                    <svg><use xlink:href="img/icons/sprite.svg#mail"></use></svg>
+                                                    <span class="h4">site@ik555.ru</span>
+                                                </div>
+                                                <div class="item-contact" target="_blank">
+                                                    <svg><use xlink:href="img/icons/sprite.svg#address"></use></svg>
+                                                    <span class="h4">Москва, ул Гагарина, 17/3</span>
+                                                </div>
+                                            </div>
+                                            <button class="btn main-btn mod-open-btn" data-modal="settings-mod">
+                                                Изменить данные
+                                            </button>
+                                        </div>
+                                        <div class="settings-p__col">
+                                            <div class="settings-p__det">
+                                                <span>УИН</span>
+                                                <span class="h4">56465464556</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="settings-p__cols">
+                                        <div class="settings-p__col">
+                                            <h2>Изменить пароль</h2>
+                                            <form action class="form disabled-form" onsubmit="event.preventDefault();formSuccess(this);openSuccessMod('Пароль изменен')">
+                                                <div class="form__items">
+                                                    <div class="form__item">
+                                                        <div class="form__lbl">Новый пароль</div>
+                                                        <div class="item-form item-form--password">
+                                                            <input type="password" autocomplete="off" name="password" placeholder="123123" class="required">
+                                                            <span data-error></span>
+                                                            <button type="button" class="item-form__eye"></button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form__item">
+                                                        <div class="form__lbl">Повторите пароль</div>
+                                                        <div class="item-form item-form--password">
+                                                            <input type="password" autocomplete="off" name="repeat-password" placeholder="123123" class="required">
+                                                            <span data-error></span>
+                                                            <button type="button" class="item-form__eye"></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form__footer">
+                                                    <button class="btn main-btn" type="submit" disabled>Изменить</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn settings-p__logout mod-open-btn" data-modal="logout-mod">
+                                    <svg><use xlink:href="img/icons/sprite.svg#logOut"></use></svg>
+                                    Выйти из аккаунта
+                                </button>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <!--overlay-->
+<div class="overlay"></div>
+<!--pass-mod-->
+<modal class="modal" id="pass-mod">
+    <div class="custom-scroll modal__overlay">
+        <div class="modal__content">
+            <button type="button" class="btn btn-close"><svg><use xlink:href="img/icons/sprite.svg#close"></use></svg></button>
+            <div class="custom-scroll">
+                <div class="modal__top">
+                    <h2 class="h1">Изменить пароль?</h2>
+                    <p>Вы можете изменить пароль в любое время во вкладке “настройки”</p>
+                </div>
+                <form action class="form disabled-form" onsubmit="event.preventDefault();formSuccess(this);openSuccessMod('Пароль успешно сохранен')">
+                    <div class="form__items">
+                        <div class="form__item">
+                            <div class="form__lbl">Новый пароль</div>
+                            <div class="item-form item-form--password">
+                                <input type="password" autocomplete="off" name="password" placeholder="123123" class="required">
+                                <span data-error></span>
+                                <button type="button" class="item-form__eye"></button>
+                            </div>
+                        </div>
+                        <div class="form__item">
+                            <div class="form__lbl">Повторите пароль</div>
+                            <div class="item-form item-form--password">
+                                <input type="password" autocomplete="off" name="repeat-password" placeholder="123123" class="required">
+                                <span data-error></span>
+                                <button type="button" class="item-form__eye"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__footer">
+                        <button class="btn main-btn" type="submit">Сохранить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</modal>
+<!--order-mod-->
+<modal class="modal" id="order-mod">
+    <div class="custom-scroll modal__overlay">
+        <div class="modal__content">
+            <button type="button" class="btn btn-close"><svg><use xlink:href="img/icons/sprite.svg#close"></use></svg></button>
+            <div class="custom-scroll">
+                <div class="modal__top">
+                    <h2 class="h1">Новый заказ</h2>
+                </div>
+                <form action class="form disabled-form"
+                    onsubmit="event.preventDefault();formSuccess(this);openSuccessMod('Заявка успешно отправлена', 'Заявка успешно отправлена, наши менеджеры скоро ее рассмотрят. Мы ответим вам в ближайшее время')">
+                    <div class="form__items">
+                        <div class="form__item">
+                            <div class="form__lbl">Тип услуги</div>
+                            <div class="item-form">
+                                <div class="dropdown radio-select service-select" aria-expanded="false">
+    <div class="dropdown__header">
+        <span data-init-text="Название">Название</span>
+        <svg><use xlink:href="img/icons/sprite.svg#chevron-bot"></use></svg>
+    </div>
+    <div class="dropdown__body">
+        <div class="custom-scroll dropdown__options">
+            <label>
+                <input type="radio" name="service-type" value="1">
+                <span>
+                    <img src="img/icons/repair.svg" alt="Ремонт">
+                    Ремонт
+                </span>
+            </label>
+            <label>
+                <input type="radio" name="service-type" value="2">
+                <span>
+                    <img src="img/icons/clock.svg" alt="Тех. обслуживание">
+                    Тех. обслуживание
+                </span>
+            </label>
+            <label>
+                <input type="radio" name="service-type" value="3">
+                <span>
+                    <img src="img/icons/box.svg" alt="Поставка">
+                    Поставка
+                </span>
+            </label>
+        </div>
+    </div>
+</div>
+                                <span data-error></span>
+                            </div>
+                        </div>
+                        <div class="form__item">
+                            <div class="form__lbl">ФИО</div>
+                            <div class="item-form">
+                                <input type="text" name="name" placeholder="Иванов Иван Сергеевич" class="required">
+                                <span data-error></span>
+                            </div>
+                        </div>
+                        <div class="form__grid">
+                            <div class="form__item">
+                                <div class="form__lbl">Почта</div>
+                                <div class="item-form">
+                                    <input type="text" name="mail" placeholder="example@gmail.com" class="required">
+                                    <span data-error></span>
+                                </div>
+                            </div>
+                            <div class="form__item">
+                                <div class="form__lbl">Телефон</div>
+                                <div class="item-form">
+                                    <input type="tel" name="phone" placeholder="+7" class="required">
+                                    <span data-error></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__item">
+                            <div class="form__lbl">Комментарий</div>
+                            <div class="item-form">
+                                <textarea placeholder="Текст комментария" name="message"
+                                    oninput="this.style.height=''; this.style.height = this.scrollHeight + 'px'"></textarea>
+                                <span data-error></span>
+                            </div>
+                        </div>
+                        <div class="form__item">
+                            <div class="form__lbl">Прикрепить фото <span>(не обязательно)</span></div>
+                            <div class="form__lbl"><span>Пожалуйста, предоставьте фотографии шильды и общий вида оборудования</span></div>
+                            <div class="item-form file-form">
+                                <label>
+                                    <input type="file" multiple name="photos" accept=".png,.jpg,.jpeg,.pdf,.doc,.docx,.ppt,.pptx">
+                                    <span><svg><use xlink:href="img/icons/sprite.svg#upload"></use></svg>Размер файла не должен превышать 3мб</span>
+                                </label>
+                                <span data-error></span>
+                                <div class="file-form__items"></div>
+                            </div>
+                        </div>
+                        <div class="form__item">
+                            <div class="form__lbl">Прикрепить файл <span>(не обязательно)</span></div>
+                            <div class="item-form file-form">
+                                <label>
+                                    <input type="file" multiple name="files" accept=".png,.jpg,.jpeg,.pdf,.doc,.docx,.ppt,.pptx">
+                                    <span><svg><use xlink:href="img/icons/sprite.svg#upload"></use></svg>Размер файла не должен превышать 3мб</span>
+                                </label>
+                                <span data-error></span>
+                                <div class="file-form__items"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__footer">
+                        <button class="btn main-btn" type="submit">Отправить</button>
+                        <p>Нажимая на кнопку, я принимаю условия <a href="#" target="_blank" class="link">соглашения</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</modal>
+<!--feedback-mod-->
+<modal class="modal" id="feedback-mod">
+    <div class="custom-scroll modal__overlay">
+        <div class="modal__content">
+            <button type="button" class="btn btn-close"><svg><use xlink:href="img/icons/sprite.svg#close"></use></svg></button>
+            <div class="custom-scroll">
+                <div class="modal__top">
+                    <h2 class="h1">Обратная связь</h2>
+                </div>
+                <form action class="form disabled-form"
+                    onsubmit="event.preventDefault();formSuccess(this);openSuccessMod('Заявка успешно отправлена', 'Заявка успешно отправлена, наши менеджеры скоро ее рассмотрят. Мы ответим вам в ближайшее время')">
+                    <input type="hidden" name="order-number" value="">
+                    <div class="order-details">
+                        <div class="form__lbl">Номер заказа</div>
+                        <p></p>
+                    </div>
+                    <div class="form__items">
+                        <div class="form__item">
+                            <div class="form__lbl">ФИО</div>
+                            <div class="item-form">
+                                <input type="text" name="name" placeholder="Иванов Иван Сергеевич" class="required">
+                                <span data-error></span>
+                            </div>
+                        </div>
+                        <div class="form__grid">
+                            <div class="form__item">
+                                <div class="form__lbl">Почта</div>
+                                <div class="item-form">
+                                    <input type="text" name="mail" placeholder="example@gmail.com" class="required">
+                                    <span data-error></span>
+                                </div>
+                            </div>
+                            <div class="form__item">
+                                <div class="form__lbl">Телефон</div>
+                                <div class="item-form">
+                                    <input type="tel" name="phone" placeholder="+7" class="required">
+                                    <span data-error></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__item">
+                            <div class="form__lbl">Комментарий</div>
+                            <div class="item-form">
+                                <textarea placeholder="Текст комментария" name="message"
+                                    oninput="this.style.height=''; this.style.height = this.scrollHeight + 'px'"></textarea>
+                                <span data-error></span>
+                            </div>
+                        </div>
+                        <div class="form__item">
+                            <div class="form__lbl">Прикрепить файл <span>(не обязательно)</span></div>
+                            <div class="item-form file-form">
+                                <label>
+                                    <input type="file" multiple name="files" accept=".png,.jpg,.jpeg,.pdf,.doc,.docx,.ppt,.pptx">
+                                    <span><svg><use xlink:href="img/icons/sprite.svg#upload"></use></svg>Размер файла не должен превышать 3мб</span>
+                                </label>
+                                <span data-error></span>
+                                <div class="file-form__items"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__footer">
+                        <button class="btn main-btn" type="submit">Отправить</button>
+                        <p>Нажимая на кнопку, я принимаю условия <a href="#" target="_blank" class="link">соглашения</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</modal>
+<!--garanty-mod-->
+<modal class="modal" id="garanty-mod">
+    <div class="custom-scroll modal__overlay">
+        <div class="modal__content">
+            <button type="button" class="btn btn-close"><svg><use xlink:href="img/icons/sprite.svg#close"></use></svg></button>
+            <div class="custom-scroll">
+                <div class="modal__top">
+                    <h2 class="h1">Обратиться по гарантии</h2>
+                </div>
+                <form action class="form disabled-form"
+                    onsubmit="event.preventDefault();formSuccess(this);openSuccessMod('Заявка успешно отправлена', 'Заявка успешно отправлена, наши менеджеры скоро ее рассмотрят. Мы ответим вам в ближайшее время')">
+                    <input type="hidden" name="order-number" value="">
+                    <div class="order-details">
+                        <div class="form__lbl">Номер заказа</div>
+                        <p></p>
+                    </div>
+                    <div class="form__items">
+                        <div class="form__item">
+                            <div class="form__lbl">ФИО</div>
+                            <div class="item-form">
+                                <input type="text" name="name" placeholder="Иванов Иван Сергеевич" class="required">
+                                <span data-error></span>
+                            </div>
+                        </div>
+                        <div class="form__grid">
+                            <div class="form__item">
+                                <div class="form__lbl">Почта</div>
+                                <div class="item-form">
+                                    <input type="text" name="mail" placeholder="example@gmail.com" class="required">
+                                    <span data-error></span>
+                                </div>
+                            </div>
+                            <div class="form__item">
+                                <div class="form__lbl">Телефон</div>
+                                <div class="item-form">
+                                    <input type="tel" name="phone" placeholder="+7" class="required">
+                                    <span data-error></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__item">
+                            <div class="form__lbl">Комментарий <span>(не обязательно)</span></div>
+                            <div class="item-form">
+                                <textarea placeholder="Опишите проблему" name="message"
+                                    oninput="this.style.height=''; this.style.height = this.scrollHeight + 'px'"></textarea>
+                                <span data-error></span>
+                            </div>
+                        </div>
+                        <div class="form__item">
+                            <div class="form__lbl">Прикрепить файл <span>(не обязательно)</span></div>
+                            <div class="form__lbl"><span>Пожалуйста, предоставьте фото и (или) видео поломки</span></div>
+                            <div class="item-form file-form">
+                                <label>
+                                    <input type="file" multiple name="files" accept=".png,.jpg,.jpeg,.pdf,.doc,.docx,.ppt,.pptx">
+                                    <span><svg><use xlink:href="img/icons/sprite.svg#upload"></use></svg>Размер файла не должен превышать 3мб</span>
+                                </label>
+                                <span data-error></span>
+                                <div class="file-form__items"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__footer">
+                        <button class="btn main-btn" type="submit">Отправить</button>
+                        <p>Нажимая на кнопку, я принимаю условия <a href="#" target="_blank" class="link">соглашения</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</modal>
+<!--settings-mod-->
+<modal class="modal" id="settings-mod">
+    <div class="custom-scroll modal__overlay">
+        <div class="modal__content">
+            <button type="button" class="btn btn-close"><svg><use xlink:href="img/icons/sprite.svg#close"></use></svg></button>
+            <div class="custom-scroll">
+                <div class="modal__top">
+                    <h2 class="h1">Редактирование данных</h2>
+                </div>
+                <form action class="form disabled-form" onsubmit="event.preventDefault();openSuccessMod('Заявка успешно отправлена')">
+                    <div class="form__items">
+                        <div class="form__item">
+                            <div class="form__lbl">Название компании</div>
+                            <div class="item-form">
+                                <input type="text" name="name" placeholder="Стройинвест" value="Стройинвест" class="required">
+                                <span data-error></span>
+                            </div>
+                        </div>
+                        <div class="form__grid">
+                            <div class="form__item">
+                                <div class="form__lbl">Почта</div>
+                                <div class="item-form">
+                                    <input type="text" name="mail" placeholder="example@gmail.com" value="example@gmail.com" class="required">
+                                    <span data-error></span>
+                                </div>
+                            </div>
+                            <div class="form__item">
+                                <div class="form__lbl">Телефон</div>
+                                <div class="item-form">
+                                    <input type="tel" name="phone" placeholder="+7" class="required" value="+7 (800) 511-63-08">
+                                    <span data-error></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__item">
+                            <div class="form__lbl">Адрес</div>
+                            <div class="item-form">
+                                <input type="text" name="name" placeholder="Москва, ул Гагарина, 17/3" value="Москва, ул Гагарина, 17/3">
+                                <span data-error></span>
+                            </div>
+                        </div>
+                        <div class="form__item">
+                            <div class="form__lbl">Комментарий <span>(не обязательно)</span></div>
+                            <div class="item-form">
+                                <textarea placeholder="Опишите проблему" name="message"
+                                    oninput="this.style.height=''; this.style.height = this.scrollHeight + 'px'"></textarea>
+                                <span data-error></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__footer">
+                        <button class="btn main-btn" type="submit">Отправить</button>
+                        <p>Нажимая на кнопку, я принимаю условия <a href="#" target="_blank" class="link">соглашения</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</modal>
+<!--logout-mod-->
+<modal class="modal" id="logout-mod">
+    <div class="custom-scroll modal__overlay">
+        <div class="modal__content">
+            <button type="button" class="btn btn-close"><svg><use xlink:href="img/icons/sprite.svg#close"></use></svg></button>
+            <div class="custom-scroll">
+                <div class="modal__top">
+                    <h2 class="h1">Выход</h2>
+                    <p>Вы уверены что хотите выйти из аккаунта?</p>
+                </div>
+                <a href="#" class="btn main-btn">Выход</a>
+            </div>
+        </div>
+    </div>
+</modal>
+<!--success-mod-->
+<modal class="modal" id="success-mod">
+    <div class="custom-scroll modal__overlay">
+        <div class="modal__content">
+            <button type="button" class="btn btn-close"><svg><use xlink:href="img/icons/sprite.svg#close"></use></svg></button>
+            <div class="custom-scroll">
+                <div class="modal__top">
+                    <h2 class="h1">Заявка успешно отправлена</h2>
+                    <p></p>
+                </div>
+                <button class="btn main-btn modal__close">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</modal>
+<!--error-mod-->
+<modal class="modal" id="error-mod">
+    <div class="custom-scroll modal__overlay">
+        <div class="modal__content">
+            <button type="button" class="btn btn-close"><svg><use xlink:href="img/icons/sprite.svg#close"></use></svg></button>
+            <div class="custom-scroll">
+                <div class="modal__top">
+                    <h2 class="h1">Ошибка</h2>
+                    <p></p>
+                </div>
+                <button class="btn main-btn modal__close">Закрыть</a>
+            </div>
+        </div>
+    </div>
+</modal>
+        </div>
+        <!--scripts-->
+<script src="js/libs/inputmask.min.js"></script>
+<script src="js/libs/swiper.min.js"></script>
+<script src="js/libs/flatpickr.min.js"></script>
+<script src="js/libs/flatpickr-ru.js"></script>
+<script src="js/main.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    @@include('_head.html', {
+    "title": "Настройки"
+    })
+
+    <body>
+        <div class="wrap">
+            @@include('_header.html', {"main": false})
+            <!--main-->
+            <main class="main">
+                <div class="container">
+                    <div class="page-wrap">
+                        @@include("_sidebar.html", {"main": false,
+                        "activeclass1": "",
+                        "activeclass2": "",
+                        "activeclass3": "",
+                        "activeclass4": "current"})
+                        <div class="page-wrap__content">
+                            <!--settings-p-->
+                            <section class="section settings-p">
+                                <div class="sec-top">
+                                    <h1>Настройки</h1>
+                                </div>
+                                <div class="settings-p__row">
+                                    <div class="settings-p__cols">
+                                        <div class="settings-p__col">
+                                            <h2>Данные о компании</h2>
+                                            <div class="settings-p__det">
+                                                <span>Название компании</span>
+                                                <span class="h4">Стройинвест</span>
+                                            </div>
+                                            <div class="settings-p__det">
+                                                <span>Контакты</span>
+                                                <div class="item-contact">
+                                                    <svg><use xlink:href="img/icons/sprite.svg#phone"></use></svg>
+                                                    <span class="h4">+7 (800) 511-63-08</span>
+                                                </div>
+                                                <div class="item-contact">
+                                                    <svg><use xlink:href="img/icons/sprite.svg#mail"></use></svg>
+                                                    <span class="h4">site@ik555.ru</span>
+                                                </div>
+                                                <div class="item-contact" target="_blank">
+                                                    <svg><use xlink:href="img/icons/sprite.svg#address"></use></svg>
+                                                    <span class="h4">Москва, ул Гагарина, 17/3</span>
+                                                </div>
+                                            </div>
+                                            <button class="btn main-btn mod-open-btn" data-modal="settings-mod">
+                                                Изменить данные
+                                            </button>
+                                        </div>
+                                        <div class="settings-p__col">
+                                            <div class="settings-p__det">
+                                                <span>УИН</span>
+                                                <span class="h4">56465464556</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="settings-p__cols">
+                                        <div class="settings-p__col">
+                                            <h2>Изменить пароль</h2>
+                                            <form action class="form disabled-form" onsubmit="event.preventDefault();formSuccess(this);openSuccessMod('Пароль изменен')">
+                                                <div class="form__items">
+                                                    <div class="form__item">
+                                                        <div class="form__lbl">Новый пароль</div>
+                                                        <div class="item-form item-form--password">
+                                                            <input type="password" autocomplete="off" name="password" placeholder="123123" class="required">
+                                                            <span data-error></span>
+                                                            <button type="button" class="item-form__eye"></button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form__item">
+                                                        <div class="form__lbl">Повторите пароль</div>
+                                                        <div class="item-form item-form--password">
+                                                            <input type="password" autocomplete="off" name="repeat-password" placeholder="123123" class="required">
+                                                            <span data-error></span>
+                                                            <button type="button" class="item-form__eye"></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form__footer">
+                                                    <button class="btn main-btn" type="submit" disabled>Изменить</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn settings-p__logout mod-open-btn" data-modal="logout-mod">
+                                    <svg><use xlink:href="img/icons/sprite.svg#logOut"></use></svg>
+                                    Выйти из аккаунта
+                                </button>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            @@include('_modal.html')
+        </div>
+        @@include('_js.html')
+    </body>
+
+</html>

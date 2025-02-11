@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    @@include('_head.html', {
+    "title": "Новости"
+    })
+
+    <body>
+        <div class="wrap">
+            @@include('_header.html', {"main": false})
+            <!--main-->
+            <main class="main">
+                <div class="container">
+                    <div class="page-wrap">
+                        @@include("_sidebar.html", {"main": false,
+                        "activeclass1": "",
+                        "activeclass2": "",
+                        "activeclass3": "current",
+                        "activeclass4": ""})
+                        <div class="page-wrap__content">
+                            <!--news-->
+                            <section class="section news">
+                                <div class="sec-top">
+                                    <h1>Новости</h1>
+                                </div>
+                                @@include('_search-form.html', {"value": ""})
+                                <div class="news__wrapper">
+                                    <div class="news__items">
+                                        @@include("_item-news.html", {"nmb": 1, "title": 'Открытый семинар "Эффективная центровка валов. Экспертный подход"'})
+                                        @@include("_item-news.html", {"nmb": 2, "title": "Инженерная компания «555» на выставке ЭкспоЭлектроника 2024"})
+                                        @@include("_item-news.html", {"nmb": 3, "title": "Поставка производственных линий Китая"})
+                                        @@include("_item-news.html", {"nmb": 4, "title":
+                                        "Новая лаборатория и офис по ремонту и сервису промышленной электроники в Новосибирске"})
+                                        @@include("_item-news.html", {"nmb": 2, "title": "Инженерная компания «555» на выставке ЭкспоЭлектроника 2024"})
+                                        @@include("_item-news.html", {"nmb": 3, "title": "Поставка производственных линий Китая"})
+                                        @@include("_item-news.html", {"nmb": 4, "title":
+                                        "Новая лаборатория и офис по ремонту и сервису промышленной электроники в Новосибирске"})
+                                        @@include("_item-news.html", {"nmb": 1, "title": 'Открытый семинар "Эффективная центровка валов. Экспертный подход"'})
+                                    </div>
+                                    @@include('_pagination.html')
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            @@include('_modal.html')
+        </div>
+        @@include('_js.html')
+    </body>
+
+</html>

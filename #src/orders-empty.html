@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    @@include('_head.html', {
+    "title": "Заказы"
+    })
+
+    <body>
+        <div class="wrap">
+            @@include('_header.html', {"main": false})
+            <!--main-->
+            <main class="main">
+                <div class="container">
+                    <div class="page-wrap">
+                        @@include("_sidebar.html", {"main": false,
+                        "activeclass1": "",
+                        "activeclass2": "current",
+                        "activeclass3": "",
+                        "activeclass4": ""
+                        })
+                        <div class="page-wrap__content">
+                            <!--orders-->
+                            <section class="section orders">
+                                <div class="sec-top">
+                                    <h1>Заказы</h1>
+                                </div>
+                                <div class="orders__top">
+                                    <div class="orders__btns">
+                                        <a href="orders.html" class="btn active">Активные</a>
+                                        <a href="orders-history.html" class="btn">История</a>
+                                    </div>
+                                    <div class="orders__action">
+                                        @@include('_search-form.html',{"value": ""})
+                                    </div>
+                                </div>
+                                <div class="orders__cols">
+                                    <div class="orders__col"><span>Тип</span></div>
+                                    <div class="orders__col"><span>Номер</span></div>
+                                    <div class="orders__col is-sortable" data-sortBy="date" data-order="asc"><span>Дата создания</span></div>
+                                    <div class="orders__col is-sortable" data-sortBy="garanty" data-order="asc"><span>Гарантия до</span></div>
+                                    <div class="orders__col"><span>Статус</span></div>
+                                </div>
+                                <div class="search-results orders-empty">
+                                    <h2>Здесь пока ничего нет</h2>
+                                    <p>Как только оформите заказ, он появится здесь</p>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            @@include('_modal.html')
+        </div>
+        @@include('_js.html')
+    </body>
+
+</html>

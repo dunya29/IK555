@@ -1,0 +1,33 @@
+<!--sidebar-->
+@@if (main == true) {
+<aside class="sidebar sidebar--main">
+    }
+    @@if (main == false) {
+    <aside class="sidebar">
+        }
+        <div class="sidebar__inner">
+            <a href="main.html" class="page-logo">
+                <img src="img/logo.svg" alt="ИК 555">
+            </a>
+            <div class="sidebar__body">
+                <button class="btn stroke-btn mod-open-btn" data-modal="order-mod">
+                    <svg><use xlink:href="img/icons/sprite.svg#plus"></use></svg>
+                    Новый заказ
+                </button>
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="#" class=" @@activeclass1"><svg><use xlink:href="img/icons/sprite.svg#home"></use></svg>Главная</a></li>
+                        <li><a href="#" class=" @@activeclass2"><svg><use xlink:href="img/icons/sprite.svg#orders"></use></svg>Заказы</a></li>
+                        <li><a href="#" class=" @@activeclass3"><svg><use xlink:href="img/icons/sprite.svg#news"></use></svg>Новости</a></li>
+                        <li><a href="#" class=" @@activeclass4"><svg><use xlink:href="img/icons/sprite.svg#settings"></use></svg>Настройки</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="sidebar__footer">
+                <a href="#" class="page-redirect">
+                    <svg><use xlink:href="img/icons/sprite.svg#website"></use></svg>
+                    <span>Вернуться на сайт</span>
+                </a>
+            </div>
+        </div>
+    </aside>

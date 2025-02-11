@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    @@include('_head.html', {
+    "title": "Новости"
+    })
+
+    <body>
+        <div class="wrap">
+            @@include('_header.html', {"main": false})
+            <!--main-->
+            <main class="main">
+                <div class="container">
+                    <div class="page-wrap">
+                        @@include("_sidebar.html", {"main": false,
+                        "activeclass1": "",
+                        "activeclass2": "",
+                        "activeclass3": "current",
+                        "activeclass4": ""})
+                        <div class="page-wrap__content">
+                            <!--news-->
+                            <section class="section news">
+                                <div class="sec-top">
+                                    <h1>Новости</h1>
+                                </div>
+                                @@include('_search-form.html', {"value": "Откры"})
+                                <div class="search-results">
+                                    <h4>Результаты поиска</h4>
+                                    <p class="page-lbl">Найдено: 15</p>
+                                </div>
+                                <div class="news__wrapper">
+                                    <div class="news__items">
+                                        <!--article-->
+                                        <article class="item-news">
+                                            <a href="#" class="media-cover">
+                                                <img src="img/content/news-1.jpg" alt>
+                                            </a>
+                                            <div class="item-news__content">
+                                                <span class="item-news__date">11.11.2024</span>
+                                                <h5><a href="#"><mark>Открытый</mark> семинар "Эффективная центровка валов. Экспертный подход"</a></h5>
+                                                <p>Инженерная компания 555 приглашает вас на авторский семинар «Эффективная центровка</p>
+                                            </div>
+                                        </article>
+                                        @@include("_item-news.html", {"nmb": 2, "title": "Инженерная компания «555» на выставке ЭкспоЭлектроника 2024"})
+                                        @@include("_item-news.html", {"nmb": 3, "title": "Поставка производственных линий Китая"})
+                                        @@include("_item-news.html", {"nmb": 4, "title":
+                                        "Новая лаборатория и офис по ремонту и сервису промышленной электроники в Новосибирске"})
+                                        @@include("_item-news.html", {"nmb": 2, "title": "Инженерная компания «555» на выставке ЭкспоЭлектроника 2024"})
+                                        @@include("_item-news.html", {"nmb": 3, "title": "Поставка производственных линий Китая"})
+                                        @@include("_item-news.html", {"nmb": 4, "title":
+                                        "Новая лаборатория и офис по ремонту и сервису промышленной электроники в Новосибирске"})
+                                        @@include("_item-news.html", {"nmb": 3, "title": "Поставка производственных линий Китая"})
+                                    </div>
+                                    @@include('_pagination.html')
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            @@include('_modal.html')
+        </div>
+        @@include('_js.html')
+    </body>
+
+</html>

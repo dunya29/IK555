@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    @@include('_head.html', {
+    "title": "Заказы"
+    })
+
+    <body>
+        <div class="wrap">
+            @@include('_header.html', {"main": false})
+            <!--main-->
+            <main class="main">
+                <div class="container">
+                    <div class="page-wrap">
+                        @@include("_sidebar.html", {"main": false,
+                        "activeclass1": "",
+                        "activeclass2": "current",
+                        "activeclass3": "",
+                        "activeclass4": ""})
+                        <div class="page-wrap__content">
+                            <!--orders-->
+                            <section class="section orders">
+                                <div class="sec-top">
+                                    <h1>Заказы</h1>
+                                </div>
+                                <div class="orders__top">
+                                    <div class="orders__btns">
+                                        <a href="orders.html" class="btn active">Активные</a>
+                                        <a href="orders-history.html" class="btn">История</a>
+                                    </div>
+                                    <div class="orders__action">
+                                        @@include('_search-form.html',{"value": "4558"})
+                                        <button class="filter-btn">
+                                            <svg><use xlink:href="img/icons/sprite.svg#filter"></use></svg>
+                                            <span>Фильтр<span class="filter-btn__count"></span></span>
+                                        </button>
+                                    </div>
+                                    <div class="orders-filter">
+                                        <form class="custom-scroll orders-filter__form">
+                                            <div class="orders-filter__top">
+                                                <div class="h2">Фильтр</div>
+                                                <button type="reset" class="btn link">Очистить</button>
+                                                <button type="button" class="btn-close">
+                                                    <svg><use xlink:href="img/icons/sprite.svg#close"></use></svg>
+                                                </button>
+                                            </div>
+                                            <div class="orders-filter__items">
+                                                <div class="orders-filter__item orders-filter__item--type">
+                                                    <div class="form__lbl">Тип</div>
+                                                    <div class="dropdown radio-select service-select" aria-expanded="false">
+                                                        <div class="dropdown__header checked">
+                                                            <span>
+                                                                <img src="img/icons/repair.svg" alt="Ремонт">
+                                                                Ремонт
+                                                            </span>
+                                                            <svg><use xlink:href="img/icons/sprite.svg#chevron-bot"></use></svg>
+                                                        </div>
+                                                        <div class="dropdown__body">
+                                                            <div class="custom-scroll dropdown__options">
+                                                                <label>
+                                                                    <input type="radio" name="service-type" value="1" data-order-type="1" checked>
+                                                                    <span>
+                                                                        <img src="img/icons/repair.svg" alt="Ремонт">
+                                                                        Ремонт
+                                                                    </span>
+                                                                </label>
+                                                                <label>
+                                                                    <input type="radio" name="service-type" value="2" data-order-type="2">
+                                                                    <span>
+                                                                        <img src="img/icons/clock.svg" alt="Тех. обслуживание">
+                                                                        Тех. обслуживание
+                                                                    </span>
+                                                                </label>
+                                                                <label>
+                                                                    <input type="radio" name="service-type" value="3" data-order-type="3">
+                                                                    <span>
+                                                                        <img src="img/icons/box.svg" alt="Поставка">
+                                                                        Поставка
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="orders-filter__item">
+                                                    <div class="form__lbl">Дата создания</div>
+                                                    <div class="form__grid">
+                                                        <div class="item-form item-form--date">
+                                                            <input type="text" name="created-start" placeholder="С" class="js-datepicker" data-name="start-date">
+                                                        </div>
+                                                        <div class="item-form item-form--date">
+                                                            <input type="text" name="created-end" data-end placeholder="По" class="js-datepicker" data-name="end-date">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="orders-filter__item">
+                                                    <div class="form__lbl">Гарантия</div>
+                                                    <div class="form__grid">
+                                                        <div class="item-form item-form--date">
+                                                            <input type="text" name="garanty-start" placeholder="С" class="js-datepicker" data-name="start-date">
+                                                        </div>
+                                                        <div class="item-form item-form--date">
+                                                            <input type="text" name="garanty-end" placeholder="По" class="js-datepicker" data-name="end-date">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="orders-filter__item">
+                                                    <div class="form__lbl">Статус</div>
+                                                    <div class="dropdown radio-select status-select current" data-order-status="1" aria-expanded="false">
+                                                        <div class="dropdown__header">
+                                                            <span data-init-text="Название">Название</span>
+                                                            <svg><use xlink:href="img/icons/sprite.svg#chevron-bot"></use></svg>
+                                                        </div>
+                                                        <div class="dropdown__body">
+                                                            <div class="custom-scroll dropdown__options">
+                                                                <label>
+                                                                    <input type="radio" name="order-status" value="all">
+                                                                    <span>Не выбрано</span>
+                                                                </label>
+                                                                <label>
+                                                                    <input type="radio" name="order-status" value="1">
+                                                                    <span>Стоп ремонт (Отправка Заказчику на тестирование)</span>
+                                                                </label>
+                                                                <label>
+                                                                    <input type="radio" name="order-status" value="2">
+                                                                    <span>Выполнено</span>
+                                                                </label>
+                                                                <label>
+                                                                    <input type="radio" name="order-status" value="3">
+                                                                    <span>Готов к отгрузке</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dropdown radio-select status-select" data-order-status="2" aria-expanded="false">
+                                                        <div class="dropdown__header">
+                                                            <span data-init-text="Название">Название</span>
+                                                            <svg><use xlink:href="img/icons/sprite.svg#chevron-bot"></use></svg>
+                                                        </div>
+                                                        <div class="dropdown__body">
+                                                            <div class="custom-scroll dropdown__options">
+                                                                <label>
+                                                                    <input type="radio" name="order-status" value="all">
+                                                                    <span>Не выбрано</span>
+                                                                </label>
+                                                                <label>
+                                                                    <input type="radio" name="order-status" value="1">
+                                                                    <span>Выполнено</span>
+                                                                </label>
+                                                                <label>
+                                                                    <input type="radio" name="order-status" value="2">
+                                                                    <span>Не выполнено</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dropdown radio-select status-select" data-order-status="3" aria-expanded="false">
+                                                        <div class="dropdown__header">
+                                                            <span data-init-text="Название">Название</span>
+                                                            <svg><use xlink:href="img/icons/sprite.svg#chevron-bot"></use></svg>
+                                                        </div>
+                                                        <div class="dropdown__body">
+                                                            <div class="custom-scroll dropdown__options" data-order-status="3">
+                                                                <label>
+                                                                    <input type="radio" name="order-status" value="all">
+                                                                    <span>Не выбрано</span>
+                                                                </label>
+                                                                <label>
+                                                                    <input type="radio" name="order-status" value="1">
+                                                                    <span>Готов к отгрузке</span>
+                                                                </label>
+                                                                <label>
+                                                                    <input type="radio" name="order-status" value="2">
+                                                                    <span>Отгружен</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="orders-filter__bottom">
+                                                <button class="btn main-btn orders-filter__close" type="button">
+                                                    Показать результаты
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="orders__cols">
+                                    <div class="orders__col"><span>Тип</span></div>
+                                    <div class="orders__col"><span>Номер</span></div>
+                                    <div class="orders__col is-sortable" data-sortBy="date" data-order="asc"><span>Дата создания</span></div>
+                                    <div class="orders__col is-sortable" data-sortBy="garanty" data-order="asc"><span>Гарантия до</span></div>
+                                    <div class="orders__col"><span>Статус</span></div>
+                                </div>
+                                <div class="search-results">
+                                    <h2>Ничего не найдено</h2>
+                                    <p>Пожалуйста, измените запрос в поиске</p>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            @@include('_modal.html')
+        </div>
+        @@include('_js.html')
+    </body>
+
+</html>

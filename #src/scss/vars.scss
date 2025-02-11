@@ -1,0 +1,45 @@
+:root {
+    --content-width: 1661px;
+    --container-offset: 30px;
+    --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+    --font-family: "Arial", sans-serif;
+    --black: #000000;
+    --white: #FFFFFF;
+    --main-color: #231F20;
+    --main-color-rgb: 35, 31, 32;
+    --primary-color: #ee1d23;
+    --primary-color-rgb: 238, 29, 35;
+    --primary-color-hover: #D00005;
+    --primary-color-active: #BC0000;
+    --disabled-color: rgba(var(--main-color-rgb), .1);
+    --gray-color: rgba(var(--main-color-rgb), 0.5);
+    --gray-color-light: #F8F8F8;
+    --error-color: #EE1D23;
+    --success-color: #1AC934;
+    --primary-color-light: rgba(var(--primary-color-rgb), .05);
+    --scrollbar-color: transparent;
+    --scrollbar-thumb-color: rgba(var(--main-color-rgb), .2);
+}
+$bp1: 1500.98px;
+$bp2: 1260.98px;
+$bp3: 1024.98px;
+$bp4: 767.98px;
+$bp5: 575.98px;
+$bp6: 479.98px;
+$bp7: 370.98px;
+
+@media (max-width: $bp1) {
+    :root {
+        --content-width: 1288px;
+    }
+} 
+@media (max-width: $bp2) {
+    :root {
+        --container-offset: 20px;
+    }
+} 
+@media (max-width: $bp3) {
+    :root {
+        --content-width: 728px;
+    }
+} 

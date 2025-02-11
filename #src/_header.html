@@ -1,0 +1,46 @@
+<!--header-->
+@@if (main == true) {
+<header class="header header--main fixed-block">
+    }
+    @@if (main == false) {
+    <header class="header fixed-block">
+        }
+        <div class="container header__container">
+            <div class="header__inner">
+                <a href="main.html" class="page-logo">
+                    <img src="img/logo.svg" alt="ИК 555">
+                </a>
+                <button class="btn stroke-btn mod-open-btn" data-modal="order-mod">
+                    <svg><use xlink:href="img/icons/sprite.svg#plus"></use></svg>
+                    Новый заказ
+                </button>
+                <div class="icon-menu" aria-label="Открыть меню">
+                    <div class="icon-menu__items">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mob-menu">
+            <div class="container">
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="#"><svg><use xlink:href="img/icons/sprite.svg#home"></use></svg>Главная</a></li>
+                        <li><a href="#"><svg><use xlink:href="img/icons/sprite.svg#orders"></use></svg>Заказы</a></li>
+                        <li><a href="#"><svg><use xlink:href="img/icons/sprite.svg#news"></use></svg>Новости</a></li>
+                        <li><a href="#"><svg><use xlink:href="img/icons/sprite.svg#settings"></use></svg>Настройки</a></li>
+                    </ul>
+                </nav>
+                <a href="#" class="page-redirect">
+                    <svg><use xlink:href="img/icons/sprite.svg#website"></use></svg>
+                    <span>Вернуться на сайт</span>
+                </a>
+                <button class="btn main-btn mod-open-btn" data-modal="order-mod">
+                    <svg><use xlink:href="img/icons/sprite.svg#plus"></use></svg>
+                    Новый заказ
+                </button>
+            </div>
+        </div>
+    </header>

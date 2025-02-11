@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    @@include('_head.html', {
+    "title": "Вход"
+    })
+
+    <body>
+        <div class="wrap">
+            <!--main-->
+            <main class="main">
+                <!--log-p-->
+                <section class="log-p">
+                    <div class="custom-scroll">
+                        <div class="log-p__inner">
+                            <div class="log-p__content">
+                                <div class="log-p__top">
+                                    @@include("_logo.html")
+                                    <h1>Вход</h1>
+                                </div>
+                                <form action class="form">
+                                    <div class="form__items">
+                                        <div class="form__item">
+                                            <div class="form__lbl">Почта</div>
+                                            <div class="item-form">
+                                                <input type="text" name="mail" placeholder="example@gmail.com">
+                                                <span data-error></span>
+                                            </div>
+                                        </div>
+                                        <div class="form__item">
+                                            <div class="form__lbl">Пароль</div>
+                                            <div class="item-form item-form--password">
+                                                <input type="password" autocomplete="off" name="password" placeholder="123123">
+                                                <span data-error></span>
+                                                <button type="button" class="item-form__eye"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="link log-p__passReset">Забыли пароль?</a>
+                                    <div class="form__footer">
+                                        <button class="btn main-btn" type="submit">Войти</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <a href="#" class="page-redirect">
+                                <svg><use xlink:href="img/icons/sprite.svg#website"></use></svg>
+                                <span>Вернуться на сайт</span>
+                            </a>
+                        </div>
+
+                    </div>
+                </section>
+            </main>
+            @@include('_modal.html')
+        </div>
+        @@include('_js.html')
+    </body>
+
+</html>
