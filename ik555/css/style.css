@@ -3693,7 +3693,7 @@ mark {
   }
 }
 
-@media (max-height: 700px) {
+@media (max-height: 800px) {
   .log-p .custom-scroll {
     padding-top: 110px;
   }
