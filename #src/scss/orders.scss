@@ -403,6 +403,7 @@
     }
 }
 .filter-btn {
+    color: var(--main-color);
     padding: 18px;
     flex-shrink: 0;
     display: flex;
@@ -520,7 +521,9 @@
         gap: 16px;
     }
     &__bottom {
-        display: none;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
     }
     @media (max-width: $bp1) {
         &__items {
@@ -576,8 +579,6 @@
             grid-template-columns: 1fr;
         }
         &__bottom {
-            display: block;
-            margin-top: 20px;
             .main-btn {
                 width: 100%;
             }

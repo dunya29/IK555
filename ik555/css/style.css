@@ -2553,6 +2553,7 @@ mark {
 }
 
 .filter-btn {
+  color: var(--main-color);
   padding: 18px;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -2706,7 +2707,13 @@ mark {
 }
 
 .orders-filter__bottom {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .btn-close svg {
@@ -3299,11 +3306,6 @@ mark {
 
   .orders-filter__items {
     grid-template-columns: 1fr;
-  }
-
-  .orders-filter__bottom {
-    display: block;
-    margin-top: 20px;
   }
 
   .orders-filter__bottom .main-btn {

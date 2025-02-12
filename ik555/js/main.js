@@ -256,6 +256,9 @@ function openErrorMod(title = false, txt = false, btnTxt = false) {
 // formSuccess
 function formSuccess(form) {
     form.querySelectorAll(".item-form").forEach(item => item.classList.remove("error"))
+    if (form.querySelectorAll("[data-error]").length > 0) {
+        form.querySelectorAll("[data-error]").forEach(item => item.textContent = '')
+    }
     form.querySelectorAll("input").forEach(inp => {
         if (!["hidden", "checkbox", "radio"].includes(inp.type)) {
             inp.value = ""
@@ -333,7 +336,7 @@ let fileTypes = [
     "application/msword", //.doc
     "application/vnd.openxmlformats-officedocument.wordprocessingml.document", //.docx
     "application/vnd.ms-powerpoint", //.ppt 
-    "application / vnd.openxmlformats - officedocument.presentationml.presentation", //.pptx
+    "application/vnd.openxmlformats-officedocument.presentationml.presentation", //.pptx
 ]
 function addFile(files, item) {
     for (let i = 0; i < files.length; i++) {
@@ -468,6 +471,11 @@ if (articleSwiper) {
         fadeEffect: {
             crossFade: true
         },
+        autoplay: {
+            delay: 3500,
+            pauseOnMouseEnter: true,
+            disableOnInteraction: false
+        },
         speed: 800,
         allowTouchMove: false,
         pagination: {
@@ -496,7 +504,7 @@ if (disabledForm.length > 0) {
         if (form.querySelectorAll("input.required").length > 0) {
             checkForm(form)
             form.querySelectorAll("input.required").forEach(inp => {
-                inp.addEventListener("change", () => {
+                inp.addEventListener("input", () => {
                     checkForm(form)
                 })
             })
@@ -610,7 +618,6 @@ function resetOrderFilter() {
 if (ordersFilter) {
     ordersFilterBtn.addEventListener("click", showOrderFilter)
     ordersFilter.querySelector(".btn-close").addEventListener("click", unshowOrderFilter)
-    ordersFilter.querySelector(".orders-filter__close").addEventListener("click", unshowOrderFilter)
     window.addEventListener("resize", () => {
         if (ordersFilterBtn.classList.contains("active") && window.innerWidth > tabletW) {
             enableScroll()
