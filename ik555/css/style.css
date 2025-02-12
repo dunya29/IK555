@@ -389,6 +389,7 @@ mark {
   display: block;
   position: relative;
   overflow: hidden;
+  background: url(../img/skeleton.svg) center/cover no-repeat;
 }
 
 .media-cover img,
